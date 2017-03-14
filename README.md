@@ -13,5 +13,6 @@ Example of usage:
 Note: the package currently only works with the document
 classes article, report and book.
 
-Author: Thomas ten Cate
-License: Public Domain
+- Author: Thomas ten Cate
+- License: Public Domain
+- Source: https://github.com/ttencate/titlepic
