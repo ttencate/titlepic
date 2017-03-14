@@ -18,8 +18,11 @@
 }
 
 \title{\LaTeX{} \texttt{titlepic} Manual}
-\author{Thomas ten Cate\thanks{\texttt{<ttencate@gmail.com>}}}
-\date{August 5, 2008}
+\author{
+	Thomas ten Cate\thanks{\texttt{<ttencate@gmail.com>}} \\
+	with contributions from \\
+	Denis Bitouz\'e}
+\date{March 14, 2017}
 \titlepic{\placeholder{\textwidth}{0.75\textwidth}} % This is the magic command!
 
 \begin{document}
@@ -30,14 +33,15 @@
 
 In \LaTeX, there is by default no way to put a picture on the title page or cover page that is produced by \verb$\maketitle$. Surprisingly, no package seemed to exist for this either, which is why I put together this very simple package named \verb$titlepic$.
 
-\textbf{Note:} \verb$titlepic$ only works with the default document classes \verb$article$, \verb$report$ and \verb$book$.
+\textbf{Note:} \verb$titlepic$ only works with the default document classes \verb$article$, \verb$report$ and \verb$book$. However, it works both with the \verb$titlepage$ and \verb$notitlepage$ document class options.
 
 \section{Installation}
 
-There are two ways to install the package:
+There are several ways to install the package:
 \begin{itemize}
 	\item Simply drop \verb$titlepic.sty$ in the same directory as your \verb$.tex$ source document. This is the easiest option for casual use.
 	\item Put \verb$titlepic.sty$ somewhere in your \verb$texmf$ tree and rehash. The details depend on your \TeX{} distribution. This gives you a system-wide installation.
+	\item Install it from \TeX{} Live or MiK\TeX.
 \end{itemize}
 
 \section{Usage}
@@ -53,8 +57,6 @@ Include the package as normal, with:
 \begin{quote}
 	\verb$\usepackage{graphicx}$
 \end{quote}
-
-\textbf{Note:} when you use the \verb$article$ document class, be sure to pass it the \verb$titlepage$ option (\verb$\documentclass[titlepage]{article}$), because articles do not have a title page by default.
 
 Then, along with the usual \verb$\title$, \verb$\author$ and \verb$\date$, put a command like the following:
 
@@ -84,10 +86,10 @@ There are three optional arguments that control the vertical layout of the title
 Here is a full example of what your document could look like.
 
 \begin{verbatim}
-% Be sure to pass titlepage to the article class
+% Pass titlepage to the article class
 \documentclass[titlepage]{article}
 
-% Centre the picture and the title vertically with cc
+% Centre the picture and the title vertically with cc (only works with titlepage mode)
 \usepackage[cc]{titlepic}
 
 % For \includegraphics
